@@ -3,6 +3,9 @@ opencv 3+
 
 docker x11
 https://marcosnietoblog.wordpress.com/2017/04/30/docker-image-with-opencv-with-x11-forwarding-for-gui/
+```
+docker run -it --rm --net=host --ipc=host  -v /tmp/docker/:/tmp/docker -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix   dymat/opencv bash
+```
 
 tutorial
 https://docs.opencv.org/3.4.2/de/da9/tutorial_template_matching.html
