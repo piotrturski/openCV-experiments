@@ -30,7 +30,8 @@ public class MatchTemplateDemo {
         // run code
 //        MatchTemp.match(args[0], args[1]);
 //        MatchTemp.match("/tmp/docker/koala1.jpg", "/tmp/docker/koala3.jpg");
-        MatchTemp.match("/tmp/docker/Template_Matching_Original_Image.jpg", "/tmp/docker/koala3.jpg");
+//        MatchTemp.match("/tmp/docker/Template_Matching_Original_Image.jpg", "/tmp/docker/koala3.jpg");
+        MatchTemp.match("/tmp/docker/Template_Matching_Original_Image.jpg", "/tmp/docker/Template_Matching_Template_Image.jpg");
 //        new MatchTemplateDemoRun().run(args);
         Thread.sleep(5000);
     }

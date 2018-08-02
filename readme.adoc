@@ -11,6 +11,9 @@ tutorial
 https://docs.opencv.org/3.4.2/de/da9/tutorial_template_matching.html
 
 
+similarity
+https://cloudinary.com/blog/how_to_automatically_identify_similar_images_using_phash
+
 compile c++
 https://www.learnopencv.com/how-to-compile-opencv-sample-code/
 ```

@@ -34,8 +34,9 @@ public class MatchTemp {
         );
         matchTemplate(image, template, result, TM_CCOEFF_NORMED);
 
-        Mat normalizedResult = new Mat();
-        normalize(result, normalizedResult, 0, 1, NORM_MINMAX, -1, new Mat());
+        Mat normalizedResult = result;
+                new Mat();
+//        normalize(result, normalizedResult, 0, 1, NORM_MINMAX, -1, new Mat());
 //        normalizedResult = result;
 
         DoublePointer maxVal = new DoublePointer();
@@ -43,8 +44,12 @@ public class MatchTemp {
         Point minLoc = new Point();
         Point maxLoc = new Point();
         minMaxLoc(normalizedResult, minVal, maxVal, minLoc, maxLoc, null);
+
         System.out.println("min: "+minLoc.x()+", "+minLoc.y());
         System.out.println("max: "+maxLoc.x()+", "+maxLoc.y());
+
+        minVal.get();
+        maxVal.get();
 
         System.out.println(3);
 
