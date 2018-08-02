@@ -26,7 +26,12 @@ public class MatchTemp {
 
         byte b = template.ptr(6, 7).get();
 
-        Mat result = new Mat(image.rows() - template.rows() + 1, image.cols() - template.cols() + 1, CV_32FC1);
+        Mat result = new Mat(
+                image.rows() - template.rows() + 1,
+                image.cols() - template.cols() + 1,
+                CV_32FC1
+//                CV_32F
+        );
         matchTemplate(image, template, result, TM_CCOEFF_NORMED);
 
         Mat normalizedResult = new Mat();
