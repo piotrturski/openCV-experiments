@@ -1,0 +1,25 @@
+opencv 3+
+
+
+docker x11
+https://marcosnietoblog.wordpress.com/2017/04/30/docker-image-with-opencv-with-x11-forwarding-for-gui/
+
+tutorial
+https://docs.opencv.org/3.4.2/de/da9/tutorial_template_matching.html
+
+
+compile c++
+https://www.learnopencv.com/how-to-compile-opencv-sample-code/
+```
+g++ -ggdb MatchTemplate_Demo.cpp `pkg-config --cflags --libs opencv`
+```
+
+
+run docker x11
+```
+xhost +
+sudo docker run --rm -ti --net=host --ipc=host \
+   -e DISPLAY=$DISPLAY \
+   -v /tmp/.X11-unix:/tmp/.X11-unix \
+   opencv_gui ./sample/build/bin/opencvSample ./sample/docker.png
+```

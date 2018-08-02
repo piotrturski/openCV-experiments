@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.4'
+    }
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    maven { url 'http://repo.spring.io/plugins-release/'}
+}
+
+dependencies {
+//    compile group: 'cc.domovoi', name: 'opencv-driver', version: '3.4'
+    compile group: 'org.bytedeco.javacpp-presets', name: 'opencv-platform', version: '3.4.2-1.4.2'
+    compile 'org.bytedeco:javacv:1.4.2'
+//    compile group: 'org.openpnp', name: 'opencv', version: '3.2.0-1'
+}
