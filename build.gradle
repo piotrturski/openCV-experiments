@@ -18,6 +18,6 @@ repositories {
 dependencies {
 //    compile group: 'cc.domovoi', name: 'opencv-driver', version: '3.4'
     compile group: 'org.bytedeco.javacpp-presets', name: 'opencv-platform', version: '3.4.2-1.4.2'
-    compile 'org.bytedeco:javacv:1.4.2'
+//    compile 'org.bytedeco:javacv:1.4.2'
 //    compile group: 'org.openpnp', name: 'opencv', version: '3.2.0-1'
 }
