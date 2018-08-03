@@ -7,8 +7,11 @@ buildscript {
     }
 }
 
+apply plugin: 'application'
 apply plugin: 'com.github.johnrengelman.shadow'
-apply plugin: 'java'
+//apply plugin: 'java'
+
+mainClassName = "net.piotrturski.waldo.imagetemplate.Application"
 
 repositories {
     mavenCentral()
@@ -17,7 +20,14 @@ repositories {
 
 dependencies {
 //    compile group: 'cc.domovoi', name: 'opencv-driver', version: '3.4'
+    compile 'io.vavr:vavr:0.9.2'
+    compile 'com.google.guava:guava:25.1-jre'
+    compile 'org.apache.commons:commons-lang3:3.7'
+    compile 'one.util:streamex:0.6.7'
     compile group: 'org.bytedeco.javacpp-presets', name: 'opencv-platform', version: '3.4.2-1.4.2'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.10.0'
 //    compile 'org.bytedeco:javacv:1.4.2'
 //    compile group: 'org.openpnp', name: 'opencv', version: '3.2.0-1'
 }
